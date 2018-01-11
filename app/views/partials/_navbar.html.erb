@@ -5,10 +5,18 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#">Edit</a>
-      <a class="nav-item nav-link" href="#">Add</a>
-      <a class="nav-item nav-link disabled" href="#">TBD</a>
+      <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="/users/new">Sign up</a>
+      <a class="nav-item nav-link" href="/sessions/new">Log in</a>
+      <a class="nav-item nav-link disabled" href="#">
+        <% if logged_in? %>
+        I'm: <%= current_user.name%>
+        <%= link_to('Logout', logout_path, {method: 'delete'})%>
+     
+        <% else %>
+	      <%= link_to("Login", new_session_path) %>
+        <% end %>
+      </a>
     </div>
   </div>
 </nav>
