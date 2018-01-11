@@ -11,14 +11,14 @@
   </head>
 
   <body>
-  
-    <% if logged_in? %>
-    Signed in As: <%= current_user.name%>
-    <%= link_to "Logout", logout_path, {method: "DELETE"} %>
-    <% else %>
-	  <%= link_to "Login", new_session_path %>
-    <% end %>
   <%= render 'partials/navbar' %>
+    <% if logged_in? %>
+      Signed in As: <%= current_user.name%>
+      <%= link_to("Logout", logout_path, {method: 'delete'}) %>
+    <% else %>
+	    <%= link_to("Login", new_session_path) %>
+    <% end %>
+  
     <%= yield %>
   </body>
 
