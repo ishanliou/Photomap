@@ -1,12 +1,14 @@
-class PitcuresController < ApplicationController
+class PicturesController < ApplicationController
   def index
   end
 
   def show
-    @picture = Picture.new
+    @picture.uesr = current_user
   end
 
   def new
+    @picture = Picture.new
+
   end
 
   def create
