@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
 
  root 'users#index'
- resources :users
+ resources :users do
+    resources :pictures
+ end
+
  resources :sessions, only: [:new, :create]
  get '/logout' => 'sessions#destroy', as: :logout
  
