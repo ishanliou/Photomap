@@ -1,2 +1,18 @@
 <h1>Pitcures#edit</h1>
 <p>Find me in app/views/pitcures/edit.html.erb</p>
+<h1>Edit photo</h1>
+
+<%= image_tag(@picture.url) %>
+
+<%= form_for [current_user, @picture] do |f| %>
+    <%= f.text_field(:url, placeholder: "Image URL")%>
+    <br>
+    <%= f.text_field(:location, placeholder: "Location")%>
+    <br>
+    <%= f.text_field(:caption, placeholder: "Caption")%>
+    <br>
+    <%= f.text_field(:body, placeholder: "Memo")%>
+    <br>
+    <%= f.submit("Update My Picture")%>
+<% end %>
+

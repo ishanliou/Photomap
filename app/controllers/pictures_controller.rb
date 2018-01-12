@@ -19,11 +19,19 @@ class PicturesController < ApplicationController
     end
 
   end
-8
+
   def edit
+    @picture = Picture.new
+    @picture = Picture.find(params[:id])
+
   end
 
   def update
+    @picture = Picture.find(params[:id])  
+    @picture.user = current_user
+    if @picture.update(picture_params)
+      redirect_to user_path(current_user)
+    end
   end
 
   def destroy
