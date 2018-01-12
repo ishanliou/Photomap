@@ -1,2 +1,4 @@
-<h1>Pitcures#show</h1>
-<p>Find me in app/views/pitcures/show.html.erb</p>
+<%= image_tag(@picture.url) %>
+<% if @picture.user == current_user %>
+    <%= link_to "Edit", edit_user_picture_path(current_user, @picture) %>
+<% end %>
