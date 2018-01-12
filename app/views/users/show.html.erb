@@ -6,3 +6,6 @@
 <div>
     <%= link_to("Add picture", new_user_picture_path(current_user))%>
 </div>
+
+
+<%= image_tag(@picture.url)%>
