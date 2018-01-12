@@ -3,7 +3,7 @@ class PicturesController < ApplicationController
   end
 
   def show
-    @picture.uesr = current_user
+    
   end
 
   def new
@@ -12,6 +12,9 @@ class PicturesController < ApplicationController
   end
 
   def create
+    @picture = Picture.new
+
+
   end
 
   def edit
