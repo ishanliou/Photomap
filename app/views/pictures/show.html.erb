@@ -1,4 +1,8 @@
+<h1>pictures#show</h1>
 <%= image_tag(@picture.url) %>
 <% if @picture.user == current_user %>
     <%= link_to "Edit", edit_user_picture_path(current_user, @picture) %>
+<% end %>
+<% if @picture.user == current_user %>
+<%= link_to "Delete", picture_path(@picture), method: "delete", data: {confirm: "Are you sure?"} %>
 <% end %>
