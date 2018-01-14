@@ -27,7 +27,14 @@ class UsersController < ApplicationController
   def update
   end
 
-  def destroy
+  def destroy   
+    #delete the cookie and log the user out 
+    #in the user controller for destroy.
+    @user = current_user
+    session[:user_id] = nil
+    if @user.destroy
+      redirect_to root_path
+    end    
   end
 
   private
