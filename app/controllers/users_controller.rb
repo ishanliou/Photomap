@@ -1,8 +1,11 @@
 class UsersController < ApplicationController
 
   before_action :authorize, only: [:show]
+
   def index
     @users = User.all
+    @user = current_user
+    @pic = Picture.all
   end
 
   def show
@@ -19,7 +22,7 @@ class UsersController < ApplicationController
    if @user.save
     redirect_to new_session_path
    else
-    flash[:danger] = "password is not match!"
+    flash[:danger] = "password is not match! Please try again."
     redirect_to new_user_path
    end
   end
