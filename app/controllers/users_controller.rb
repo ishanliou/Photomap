@@ -18,6 +18,9 @@ class UsersController < ApplicationController
    @user = User.new(user_params)
    if @user.save
     redirect_to new_session_path
+   else
+    flash[:danger] = "password is not match!"
+    redirect_to new_user_path
    end
   end
 

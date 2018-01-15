@@ -6,3 +6,6 @@
 <% if @picture.user == current_user %>
 <%= link_to "Delete", picture_path(@picture), method: "delete", data: {confirm: "Are you sure?"} %>
 <% end %>
+<h2>location: <%= @picture.location%></h2>
+<h2>Caption: <%= @picture.caption%></h2>
+<h2>Memo: <%= @picture.body%></h2>
