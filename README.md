@@ -1,5 +1,7 @@
 # README
 
+--
+![](photomap.png)
 # Photomap
 
 --
