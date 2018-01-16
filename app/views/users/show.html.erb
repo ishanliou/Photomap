@@ -1,4 +1,4 @@
-<h1><%= @user.name %>' Photo Map</h1>
+<h1 class="lead"><%= @user.name %>' Photo Map</h1>
 
 
 <% if @user == current_user %>
@@ -9,15 +9,18 @@
 
 <% if @user == current_user %>
 <div>
-    <%= link_to("Delete My account", user_path(@user), method: "delete" ,data: {confirm: "Don't leave!!"})%>
+    <%= link_to("Delete My account", user_path(@user), method: "delete" ,data: {confirm: "Oh no!! We miss you already!"})%>
 </div>
 <% end %>
 
 <% @user.pictures.each do |pic| %>
     <div>
         <%= link_to image_tag(pic.url), user_picture_path(@user, pic) %>
-        <h2>Location:<%= pic.location %></h2>
-        <h2>Caption:<%= pic.caption %></h2>
+        <p class="lead">Location: <%= pic.location %>
+        <medium class="text-muted", class="lead">Caption: <%= pic.caption %></small>
+        </p>
+        
+
     </div>
     
     

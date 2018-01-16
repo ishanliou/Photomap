@@ -4,18 +4,42 @@
 
 <%= image_tag(@picture.url) %>
 
-<%= form_for [current_user, @picture] do |f| %>
-    <%= f.text_field(:url, placeholder: "Image URL")%>
-    <br>
-    <%= f.text_field(:location, placeholder: "Location")%>
-    <br>
-    <%= f.text_field(:caption, placeholder: "Caption")%>
-    <br>
-    <%= f.text_field(:body, placeholder: "Memo")%>
-    <br>
-    <%= f.submit("Update My Picture")%>
+<%= form_for [current_user, @picture], :html => {class: 'new_user form-horizontal'} do |f| %>
+    <div class="row"><legend class="col-md-4 col-md-offset-4">Edit My Photomap</legend></div>
+    <fieldset>
+        <div class="form-group">
+            <%= f.label :image, 'Image URL*', class: 'col-md-4 control-label' %>
+            <div class="col-md-5">
+                <%= f.text_field :url, class: 'form-control' %>
+            </div>
+        </div>
+        <div class="form-group">
+            <%= f.label :location, 'Location*', class: 'col-md-4 control-label' %>
+            <div class="col-md-5">
+                <%= f.text_field :location, class: 'form-control' %>
+            </div>
+        </div>
+        <div class="form-group">
+            <%= f.label :caption, 'Caption*', class: 'col-md-4 control-label' %>
+            <div class="col-md-5">
+                <%= f.text_field :caption, class: 'form-control' %>
+            </div>
+        </div>
+        <div class="form-group">
+            <%= f.label :body, 'Memo', class: 'col-md-4 control-label' %>
+            <div class="col-md-5">
+                <%= f.text_field :body, class: 'form-control' %>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-8 col-md-offset-4">
+                <%= f.submit 'Update it!', class: 'btn btn-info' %>
+            </div>
+        </div>
+    </fieldset>
+    <% if flash[:danger] %>
+    <div class="alert alert-danger">
+        <%= flash[:danger] %>
+    </div>
 <% end %>
-
-
-
-
+<% end %>

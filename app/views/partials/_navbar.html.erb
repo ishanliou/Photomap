@@ -8,7 +8,7 @@
       <a class="nav-item nav-link active" href="/users">Discover <span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link disabled" href="#">
         <% if logged_in? %>
-        I'm: <%= link_to current_user.name, user_path(current_user), {:class =>"nav-item nav-link"}%>
+        Hello! <%= link_to current_user.name, user_path(current_user), {:class =>"nav-item nav-link"}%>
         <%= link_to('Logout', logout_path, {method: 'delete', :class =>"nav-item nav-link"})%>
      
         <% else %>
