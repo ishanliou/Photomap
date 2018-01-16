@@ -1,8 +1,6 @@
-<h1>Pitcures#edit</h1>
-<p>Find me in app/views/pitcures/edit.html.erb</p>
 <h1>Edit photo</h1>
 
-<%= image_tag(@picture.url) %>
+<%= image_tag(@picture.url, height: 'auto', width: '100%') %>
 
 <%= form_for [current_user, @picture], :html => {class: 'new_user form-horizontal'} do |f| %>
     <div class="row"><legend class="col-md-4 col-md-offset-4">Edit My Photomap</legend></div>
