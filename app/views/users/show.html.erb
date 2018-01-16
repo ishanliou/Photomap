@@ -1,17 +1,18 @@
 <h1 class="lead"><%= @user.name %>' Photo Map</h1>
 
-
+<div style="margin:0px 0px 10px 0px;">
 <% if @user == current_user %>
-<div>
-    <%= link_to("Add picture", new_user_picture_path(current_user))%>
-</div>
+    <button type="button" class="btn btn-light" >
+        <%= link_to("Add picture", new_user_picture_path(current_user))%>
+    </button>
 <% end %>
 
 <% if @user == current_user %>
-<div>
+    <button type="button" class="btn btn-light" style="float:right;">
     <%= link_to("Delete My account", user_path(@user), method: "delete" ,data: {confirm: "Oh no!! We miss you already!"})%>
-</div>
+    </button>
 <% end %>
+</div>
 
 <% @user.pictures.each do |pic| %>
     <div>
@@ -21,4 +22,5 @@
         </p>
     </div>       
 <% end %>
+
 
