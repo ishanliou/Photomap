@@ -31,7 +31,7 @@ Photomap was built using Ruby on Rails, postgreSQL with Bootsrap front-end compo
 - The Relationship of models
 - Complete RESTful routes
 - Full CRUD
-- Deployed on Heroku
+- Deploy on Heroku
 
 --
 
