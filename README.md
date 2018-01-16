@@ -2,7 +2,7 @@
 
 --
 ![](photomap.png)
-![](photomap logo11-03.png)
+![](photomap-logo-103.png)
 # Photomap
 
 
