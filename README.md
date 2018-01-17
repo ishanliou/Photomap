@@ -17,6 +17,13 @@ Exploring the world in one place...
 Photomap is a internet-based photo-sharing application that allows users to share picutres. 
 
 --
+## ERD
+![](ERD-01.jpg)
+
+## Wireframe
+![](photomap_wireframe-01.jpg)
+
+--
 
 ## Development & Technologies
 
