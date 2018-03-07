@@ -1,6 +1,6 @@
 <div class="container">
 <%= image_tag(@picture.url, height: 'auto', width: '100%') %>
-<div style="margin:10px 0px 0px 0px">
+<div style="margin:10px 0px 30px 0px">
 <% if @picture.user == current_user %>
     <button type="button" class="btn btn-light" >   
       <%= link_to "Edit", edit_user_picture_path(current_user, @picture),{:class => "link-to"} %>
@@ -20,8 +20,8 @@
 <% end %>
 </button>
 </div>
-<h4 class="lead">Location: <%= @picture.location%>
-    <medium class="text-muted" ,class="lead">Caption: <%= @picture.caption %></small>
+<h4 class="lead" >Location: <%= @picture.location%> <br/><br/>
+    <medium class="text-muted" ,class="lead" >Caption: <%= @picture.caption %></small>
 </h4>
 
 <h4 class="lead">Notes: <%= @picture.body%></h4>
