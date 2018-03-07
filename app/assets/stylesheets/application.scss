@@ -1,1 +1,28 @@
-@import 'bootstrap'
+@import 'bootstrap';
+
+.bg-light{
+    background-color:white !important;
+
+}
+
+.navbar{
+    border-radius: initial !important;
+    min-height: 100px !important;
+   
+}
+
+.top-bar{
+    height: 10px;
+    width: 100%;
+    background-color:rgb(244, 68, 68);
+
+}
+
+.nav-photomap{
+    text-decoration: none !important;
+    font-family: inherit !important;
+    font-weight: inherit;
+    color: inherit !important;
+    
+}
+

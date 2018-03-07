@@ -1,3 +1,4 @@
+<div class="container">
 <% @users.each do |u| 
     userPic = []%>
     <% @pic.each do |pic| %>
@@ -8,10 +9,21 @@
 <div class="card bg-light mb-3" style="width: 25rem; height: 25rem; float:left; margin:0px 20px 10px 0px;">
 
   <img class="card-img-top" src="<%= userPic.first %>" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title"><%= link_to(u.name, user_path(u))%></h5>
+  <div class="card-body" >
+    <h5 class="card-title" ><%= link_to(u.name, user_path(u))%></h5>
     <p class="card-text"><%= %></p>
 
   </div>
 </div>
 <% end %> 
+</div>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
