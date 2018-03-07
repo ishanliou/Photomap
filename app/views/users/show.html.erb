@@ -1,16 +1,16 @@
 <div class="container">
-<h1 class="lead"><%= @user.name %>' Photo Map</h1>
+<h1 class="lead"><%= @user.name %>' Photomap</h1>
 
 <div style="margin:0px 0px 10px 0px;">
 <% if @user == current_user %>
     <button type="button" class="btn btn-light" >
-        <%= link_to("Add picture", new_user_picture_path(current_user))%>
+        <%= link_to("Add picture", new_user_picture_path(current_user),{:class => "link-to"})%>
     </button>
 <% end %>
 
 <% if @user == current_user %>
     <button type="button" class="btn btn-light" style="float:right;">
-    <%= link_to("Delete My account", user_path(@user), method: "delete" ,data: {confirm: "Oh no!! We miss you already!"})%>
+    <%= link_to("Delete My account", user_path(@user), method: "delete" ,data: {confirm: "Oh no!! We miss you already!"}, :class => "link-to")%>
     </button>
 <% end %>
 </div>
